@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Register - Livestock Vaccination Reminder System</title>
+ <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header>
+<h1>Livestock Vaccination Reminder System</h1>
+<p>Keep your livestock healthy with our vaccination reminders.</p>
+</header>
+<div class="container">
+    <div class="form-box" id="register form">
+        <form action="">
+            <h2>Register</h2>
+            <label for="email">Email</label>
+            <input type="email" name="email" placeholder="email" required>
+            <label for="password">Password</label>
+            <input type="password" name="password" placeholder="password" required>
+            <label for="first-name">First name</label>
+            <input type="text" id="first-name" name="first_name" required>
+            <label for="last-name">Last name</label>
+            <input type="text" id="last-name" name="last_name" required>
+            <label for="national-id">National ID number</label>
+            <input type="text" id="national-id" name="national_id" required>
+            <label for="phone">Phone number</label>
+            <input type="tel" id="phone" name="phone"
+            pattern="07[0-9]{8}"
+            title="Ten digits, starting 07"
+            placeholder="07XXXXXXXX"
+            required>
+            </fieldset>
+            <fieldset>
+            <legend>Your role</legend>
+            <label for="role">Role</label>
+            <select id="role" name="role" required>
+            <option value="">Choose a role</option>
+            <option value="farmer">Farmer</option>
+            <option value="veterinarian">Veterinarian</option>
+            <option value="admin">Administrator</option>
+            </select>
+            </fieldset>
+            </fieldset><label for="rules">
+            <input type="checkbox" id="rules" name="rules" required>
+            I accept the system's rules
+            </label>
+            <button type="submit" name="register">Register</button>
+            <p>Already have an account? <a href="login.html">Login here</a>.</p>
+        </form>
+    </div>
+</div>
+<nav>
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="about.html">About Us</a></li>
+<li><a href="login.html">Login</a></li>
+<li><a href="contact.html">Contact</a></li>
+<li><a href="register.html">Register</a></li>
+<li><a href="table.html">Records</a></li>
+</ul>
+</nav>
+<footer>
+<p>Livestock Vaccination Reminder System, PO Box 4021, Kajiado.</p>
+<p>Site built by Ngoya Hope & Jessica Muiruri, DBT Year 1, 2026.</p>
+</footer>
+</body>
+</html>

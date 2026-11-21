@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Register - Livestock Vaccination Reminder System</title>
+ <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<header>
+<h1>Livestock Vaccination Reminder System</h1>
+<p>Keep your livestock healthy with our vaccination reminders.</p>
+</header>
+<div class="container">
+    <div class="form-box" id="register form">
+        <form action="">
+            <h2>Register livestock</h2>
+            <legend>select type</legend>
+            <label for="species">species</label>
+            <select id="species" name="species" required>
+            <option value="">Choose a type</option>
+            <option value="cattle">cattle</option>
+            <option value="goats">goats</option>
+            <option value="sheep">sheep</option>
+            <option value="poultry">poultry</option>
+            </select>
+            <label for="breed">Breed</label>
+            <input type="text" id="breed" name="breed" required>
+            <label for="D.O.B">Date of Birth</label>
+            <input type="date" id="D.O.B" name="date_of_birth" required>
+            <label for="status">Status</label>
+            <input type="text" id="status" name="status" required>
+            <label for="gender">Gender</label>
+            <select id="gender" name="gender" required>
+            <option value="">Choose a gender</option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            </select>
+            <label for="age">Age</label>
+            <input type="number" id="age" name="age" required>
+            <button type="submit" name="register">Register</button>
+        </form>
+    </div>
+</div>
+<footer>
+<p>Livestock Vaccination Reminder System, PO Box 4021, Kajiado.</p>
+<p>Site built by Ngoya Hope & Jessica Muiruri, DBT Year 1, 2026.</p>
+</footer>
+</body>
+</html>
