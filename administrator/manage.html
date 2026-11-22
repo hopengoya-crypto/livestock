@@ -1,0 +1,111 @@
+<!-- SYSTEM MONITORING -->
+<section>
+    <h2>System Monitoring</h2>
+
+    <h3>System Status</h3>
+    <p>Server Status: <strong>Online</strong></p>
+    <p>Database Status: <strong>Connected</strong></p>
+    <p>System Performance: <strong>Normal</strong></p>
+    <p>Last Backup: <strong>Today, 8:00 AM</strong></p>
+
+    <h3>System Activity Monitoring</h3>
+
+    <table border="1" cellpadding="8">
+        <tr>
+            <th>Activity ID</th>
+            <th>Activity</th>
+            <th>User</th>
+            <th>Date</th>
+            <th>Status</th>
+        </tr>
+
+        <tr>
+            <td>ACT001</td>
+            <td>User Login</td>
+            <td>Mary Wanjiku</td>
+            <td>22/11/2026</td>
+            <td>Successful</td>
+        </tr>
+
+        <tr>
+            <td>ACT002</td>
+            <td>Account Updated</td>
+            <td>Admin</td>
+            <td>22/11/2026</td>
+            <td>Completed</td>
+        </tr>
+
+        <tr>
+            <td>ACT003</td>
+            <td>Failed Login Attempt</td>
+            <td>Brian Otieno</td>
+            <td>22/11/2026</td>
+            <td>Failed</td>
+        </tr>
+
+        <tr>
+            <td>ACT004</td>
+            <td>System Settings Changed</td>
+            <td>Admin</td>
+            <td>22/11/2026</td>
+            <td>Completed</td>
+        </tr>
+    </table>
+</section>
+
+<!-- SYSTEM SETTINGS MANAGEMENT -->
+<section>
+    <h2>System Settings Management</h2>
+
+    <label>System Name:</label>
+    <input type="text" id="sysName" value="Management System">
+    <br><br>
+
+    <label>User Registration:</label>
+    <select id="registration">
+        <option>Enabled</option>
+        <option>Disabled</option>
+    </select>
+    <br><br>
+
+    <label>Email Notifications:</label>
+    <select id="emailSettings">
+        <option>Enabled</option>
+        <option>Disabled</option>
+    </select>
+    <br><br>
+
+    <label>System Maintenance:</label>
+    <select id="maintenanceMode">
+        <option>Off</option>
+        <option>On</option>
+    </select>
+    <br><br>
+
+    <label>Backup Frequency:</label>
+    <select id="backup">
+        <option>Daily</option>
+        <option>Weekly</option>
+        <option>Monthly</option>
+    </select>
+    <br><br>
+
+    <button onclick="updateSystem()">Update Settings</button>
+</section>
+
+<script>
+function updateSystem() {
+    let name = document.getElementById("sysName").value;
+    let registration = document.getElementById("registration").value;
+    let email = document.getElementById("emailSettings").value;
+    let maintenance = document.getElementById("maintenanceMode").value;
+    let backup = document.getElementById("backup").value;
+
+    alert("System settings updated successfully!\n\n" +
+          "System Name: " + name +
+          "\nUser Registration: " + registration +
+          "\nEmail Notifications: " + email +
+          "\nMaintenance Mode: " + maintenance +
+          "\nBackup Frequency: " + backup);
+}
+</script>
