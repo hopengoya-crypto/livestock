@@ -1,5 +1,5 @@
 <?php
-$page_title = 'Welcome to Ereteti';
+$page_title = 'Livestock Vaccination Reminder System';
 include 'includes/header.php';
 ?>
 <main>
