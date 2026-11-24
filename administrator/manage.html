@@ -92,20 +92,3 @@
 
     <button onclick="updateSystem()">Update Settings</button>
 </section>
-
-<script>
-function updateSystem() {
-    let name = document.getElementById("sysName").value;
-    let registration = document.getElementById("registration").value;
-    let email = document.getElementById("emailSettings").value;
-    let maintenance = document.getElementById("maintenanceMode").value;
-    let backup = document.getElementById("backup").value;
-
-    alert("System settings updated successfully!\n\n" +
-          "System Name: " + name +
-          "\nUser Registration: " + registration +
-          "\nEmail Notifications: " + email +
-          "\nMaintenance Mode: " + maintenance +
-          "\nBackup Frequency: " + backup);
-}
-</script>
