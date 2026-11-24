@@ -1,4 +1,7 @@
-
+<?php
+$page_title = 'Welcome to Ereteti';
+include 'includes/header.php';
+?>
 <body>
 
 <div class="container">
@@ -99,4 +102,4 @@
         </table>
     </section>
 </div>
-
+<?php include 'includes/footer.php'; ?>

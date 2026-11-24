@@ -1,4 +1,7 @@
-
+<?php
+$page_title = 'Welcome to Ereteti';
+include 'includes/header.php';
+?>
 <main>
 <h2>Contact Us</h2>
 <p>If you have any questions or feedback, please feel free to reach out to us:</p>
@@ -8,3 +11,4 @@
 <li>Address: PO Box 4021, Ngong</li>
 </ul>
 </main>
+<?php include 'includes/footer.php'; ?>

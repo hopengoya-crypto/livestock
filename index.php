@@ -1,4 +1,7 @@
-
+<?php
+$page_title = 'Welcome to Ereteti';
+include 'includes/header.php';
+?>
   <main>
     <section>
       <h2>Keep your livestock healthy</h2>
@@ -23,5 +26,4 @@
         number if you are a veterinarian.</li>
     </ul>
   </aside>
-
-  
+<?php include 'includes/footer.php'; ?>

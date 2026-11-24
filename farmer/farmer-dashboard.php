@@ -1,4 +1,7 @@
-
+<?php
+$page_title = 'Welcome to Ereteti';
+include 'includes/header.php';
+?>
 <nav class="siderbar">
   <div class="logo-menu">
     <h3 class="logo-text">Farmer Dashboard</h3>
@@ -30,3 +33,4 @@
     </li>
 </ul>
 </nav>
+<?php include 'includes/footer.php'; ?>

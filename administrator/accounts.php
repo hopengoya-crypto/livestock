@@ -1,4 +1,7 @@
-
+<?php
+$page_title = 'Welcome to Ereteti';
+include 'includes/header.php';
+?>
 <body><!-- USER ACCOUNT MANAGEMENT -->
  <section>
     <h2>Manage User Accounts</h2>
@@ -41,3 +44,4 @@
         </tr>
     </table>
 </section>
+<?php include 'includes/footer.php'; ?>

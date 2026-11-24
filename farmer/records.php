@@ -1,4 +1,7 @@
-
+<?php
+$page_title = 'Welcome to Ereteti';
+include 'includes/header.php';
+?>
 <body>
     <div class="records-container">
         <h3>Vaccination Records</h3>
@@ -23,3 +26,4 @@
             </tbody>
         </table>
     </div>
+<?php include 'includes/footer.php'; ?>

@@ -1,4 +1,7 @@
-
+<?php
+$page_title = 'Welcome to Ereteti';
+include 'includes/header.php';
+?>
 <div class="container">
     <div class="form-box" id="login form">
         <form action="">
@@ -17,4 +20,4 @@
         </form>
     </div>
 </div>
-
+<?php include 'includes/footer.php'; ?>

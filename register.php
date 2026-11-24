@@ -1,7 +1,10 @@
-
+<?php
+$page_title = 'Welcome to Ereteti';
+include 'includes/header.php';
+?>
 <div class="container">
     <div class="form-box" id="register form">
-        <form action="">
+        <form action="process-register.php" method="post">
             <h2>Register</h2>
             <label for="email">Email</label>
             <input type="email" name="email" placeholder="email" required>
@@ -41,3 +44,4 @@
         </form>
     </div>
 </div>
+<?php include 'includes/footer.php'; ?>

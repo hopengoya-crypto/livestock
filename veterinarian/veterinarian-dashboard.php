@@ -1,8 +1,7 @@
-
-<header>
-<h1>Livestock Vaccination Reminder System</h1>
-<p>Keep your livestock healthy with our vaccination reminders.</p>
-</header>
+<?php
+$page_title = 'Welcome to Ereteti';
+include 'includes/header.php';
+?>
 <nav class="siderbar">
   <div class="logo-menu">
     <h2 class="logo-text">Veterinarian Dashboard</h2>
@@ -25,3 +24,4 @@
     </li>
 </ul>
 </nav>
+<?php include 'includes/footer.php'; ?>

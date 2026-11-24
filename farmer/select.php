@@ -1,4 +1,7 @@
-
+<?php
+$page_title = 'Welcome to Ereteti';
+include 'includes/header.php';
+?>
 <div class="container">
     <div class="form-box" id="select-veterinarian-form">
         <form action="">
@@ -23,3 +26,4 @@
 </footer>
 </body>
 </html>
+<?php include 'includes/footer.php'; ?>

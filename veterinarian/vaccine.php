@@ -1,4 +1,7 @@
-
+<?php
+$page_title = 'Welcome to Ereteti';
+include 'includes/header.php';
+?>
 <main class="form-page">
     <h1>Vaccine Details</h1>
     <a href="veterinarian-dashboard.html">Back to Dashboard</a>
@@ -31,3 +34,4 @@
         </form>
     </section>
 </main>
+<?php include 'includes/footer.php'; ?>

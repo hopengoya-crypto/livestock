@@ -1,3 +1,7 @@
+<?php
+$page_title = 'Welcome to Ereteti';
+include 'includes/header.php';
+?>
 <!-- SYSTEM MONITORING -->
 <section>
     <h2>System Monitoring</h2>
@@ -92,3 +96,4 @@
 
     <button onclick="updateSystem()">Update Settings</button>
 </section>
+<?php include 'includes/footer.php'; ?>
