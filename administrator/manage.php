@@ -1,6 +1,6 @@
 <?php
 $page_title = 'Livestock Vaccination Reminder System';
-include 'includes/header.php';
+include '../includes/header.php';
 ?>
 <!-- SYSTEM MONITORING -->
 <section>
@@ -96,4 +96,4 @@ include 'includes/header.php';
 
     <button onclick="updateSystem()">Update Settings</button>
 </section>
-<?php include 'includes/footer.php'; ?>
+<?php include '../includes/footer.php'; ?>

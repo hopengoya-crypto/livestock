@@ -1,6 +1,6 @@
 <?php
 $page_title = 'Livestock Vaccination Reminder System';
-include 'includes/header.php';
+include '../includes/header.php';
 ?>
 <body>
 
@@ -102,4 +102,4 @@ include 'includes/header.php';
         </table>
     </section>
 </div>
-<?php include 'includes/footer.php'; ?>
+<?php include '../includes/footer.php'; ?>

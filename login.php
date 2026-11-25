@@ -16,7 +16,7 @@ include 'includes/header.php';
 
             <button type="submit" name="login">login</button>
             <p>Please login to access your account.</p>
-            <p>Don't have an account? <a href="register.html">Register here</a>.</p>
+            <p>Don't have an account? <a href="register.php">Register here</a>.</p>
         </form>
     </div>
 </div>

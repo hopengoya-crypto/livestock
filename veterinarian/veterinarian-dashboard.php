@@ -1,6 +1,6 @@
 <?php
 $page_title = 'Livestock Vaccination Reminder System';
-include 'includes/header.php';
+include '../includes/header.php';
 ?>
 <nav class="siderbar">
   <div class="logo-menu">
@@ -9,19 +9,19 @@ include 'includes/header.php';
   </div>
 <ul class="list">
     <li class="list-item">
-        <a href="veterinarian-dashboard.html">
+        <a href="veterinarian-dashboard.php">
         <span class="link-name">Dashboard</span>
         </a>
-        <a href="vaccine.html">
+        <a href="vaccine.php">
         <span class="link-name">Manage Vaccines</span>
         </a>
-        <a href="schedule.html">
+        <a href="schedule.php">
         <span class="link-name">Manage Schedule</span>
         </a>
-        <a href="details.html">
+        <a href="details.php">
           <span class="link-name">Details</span>
         </a>
     </li>
 </ul>
 </nav>
-<?php include 'includes/footer.php'; ?>
+<?php include '../includes/footer.php'; ?>

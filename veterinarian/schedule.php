@@ -1,12 +1,13 @@
 <?php
 $page_title = 'Livestock Vaccination Reminder System';
-include 'includes/header.php';
+include '../includes/header.php';
 ?>
 <main class="form-page">
     <h1>Vaccination Schedules</h1>
-    <a href="veterinarian-dashboard.html">Back to Dashboard</a>
+    <a href="veterinarian-dashboard.php">Back to Dashboard</a>
     <section class="content-panel">
         <h2>Create / Confirm Vaccination Schedule</h2>
+        <div class="form-box" id="register-form">
         <form action="#" method="post">
             <label for="farmer">Farmer ID</label>
             <input type="text" id="farmer" name="farmer_id" required>

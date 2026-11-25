@@ -1,6 +1,6 @@
 <?php
 $page_title = 'Livestock Vaccination Reminder System';
-include 'includes/header.php';
+include '../includes/header.php';
 ?>
 <main class="form-page">
     <h1>Record Vaccination Details</h1>
@@ -8,7 +8,7 @@ include 'includes/header.php';
 
     <section class="content-panel">
         <h2>Vaccination Record</h2>
-
+        <div class="form-box" id="register-form">
         <form action="#" method="post">
 
             <h3>Livestock and Schedule Information</h3>
@@ -53,6 +53,7 @@ include 'includes/header.php';
             </button>
 
         </form>
+        </div>
     </section>
 </main>
 <?php include 'includes/footer.php'; ?>
