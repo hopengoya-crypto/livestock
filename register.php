@@ -1,6 +1,7 @@
 <?php
 $page_title = 'Livestock Vaccination Reminder System';
 include 'includes/header.php';
+include 'includes/db.php';
 ?>
 <div class="container">
     <div class="form-box" id="register-form">
