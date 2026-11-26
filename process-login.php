@@ -6,7 +6,7 @@
     if (isset($_POST['login'])) {
      $email = $_POST['email'];
      $password = $_POST['password'];
-$sql = "SELECT * FROM user WHERE email = ?";
+$sql = "SELECT * FROM user WHERE email_address = ?";
 
     $stmt = mysqli_prepare($conn, $sql);
 
@@ -20,28 +20,26 @@ $sql = "SELECT * FROM user WHERE email = ?";
 
         $user = mysqli_fetch_assoc($result);
 
-        if (password_verify($password, $user['password'])) {
+        if (password_verify($password, $user['password_hash'])) {
 
-            if ($user['account_status'] != 'Active') {
-                die("Your account is not active.");
             }
 
             $_SESSION['user_id'] = $user['user_id'];
-            $_SESSION['user_role'] = $user['user_role'];
+            $_SESSION['role'] = $user['role'];
 
-            if ($user['user_role'] == 'Farmer') {
+            if ($user['role'] == 'Farmer') {
 
                 header("Location: farmer/dashboard.php");
                 exit();
 
             } 
-            elseif ($user['user_role'] == 'Veterinarian') {
+            elseif ($user['role'] == 'Veterinarian') {
 
                 header("Location: veterinarian/dashboard.php");
                 exit();
 
             } 
-            elseif ($user['user_role'] == 'Administrator') {
+            elseif ($user['role'] == 'Administrator') {
 
                 header("Location: admin/dashboard.php");
                 exit();
@@ -58,6 +56,5 @@ $sql = "SELECT * FROM user WHERE email = ?";
     } else {
         echo "User not found.";
     }
-}
 
 ?>
