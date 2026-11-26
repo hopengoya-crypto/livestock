@@ -1,31 +1,32 @@
 <?php
 $page_title = 'Livestock Vaccination Reminder System';
+require_once __DIR__ . '/includes/auth.php';
+require_once __DIR__ . '/includes/helpers.php';
 include 'includes/header.php';
-include 'includes/db.php';
 ?>
 <div class="container">
     <div class="form-box" id="register-form">
         <form action="process-register.php" method="post">
             <h2>Register</h2>
+            <?php render_flash_message(); ?>
             <label for="email">Email</label>
-            <input type="email" name="email" id = "email" placeholder="email" required>
+            <input type="email" name="email" id="email" maxlength="50" placeholder="email" required>
             <label for="password">Password</label>
-            <input type="password" name="password" id="password" placeholder="password" required>
+            <input type="password" name="password" id="password" minlength="8" placeholder="password" required>
             <label for="confirm-password">Confirm Password</label>
-            <input type="password" name="confirm_password" id="confirm-password" placeholder="confirm password" required>
+            <input type="password" name="confirm_password" id="confirm-password" minlength="8" placeholder="confirm password" required>
             <label for="first-name">First name</label>
-            <input type="text" id="first-name" placeholder="first name" name="first_name" required>
+            <input type="text" id="first-name" placeholder="first name" name="first_name" maxlength="100" required>
             <label for="last-name">Last name</label>
-            <input type="text" id="last-name" placeholder="last name" name="last_name" required>
+            <input type="text" id="last-name" placeholder="last name" name="last_name" maxlength="100" required>
             <label for="national-id">National ID number</label>
-            <input type="text" id="national-id" placeholder="national ID number" name="national_id" required>
+            <input type="text" id="national-id" placeholder="national ID number" name="national_id" maxlength="30" required>
             <label for="phone">Phone number</label>
             <input type="tel" id="phone" name="phone"
-            pattern="07[0-9]{8}"
-            title="Ten digits, starting 07"
-            placeholder="07XXXXXXXX"
+            pattern="(07|01)[0-9]{8}"
+            title="Ten digits, starting with 07 or 01"
+            placeholder="07XXXXXXXX or 01XXXXXXXX"
             required>
-            </fieldset>
             <fieldset>
             <legend>Your role</legend>
             <label for="role">Role</label>
@@ -33,10 +34,17 @@ include 'includes/db.php';
             <option value="">Choose a role</option>
             <option value="farmer">Farmer</option>
             <option value="veterinarian">Veterinarian</option>
-            <option value="admin">Administrator</option>
             </select>
             </fieldset>
-            </fieldset><label for="rules">
+            <div id="farmer-registration-fields">
+                <label for="location">Farmer location</label>
+                <input type="text" id="location" name="location" maxlength="25">
+            </div>
+            <div id="veterinarian-registration-fields">
+                <label for="registration-number">Veterinarian registration number</label>
+                <input type="text" id="registration-number" name="registration_number" maxlength="30">
+            </div>
+            <label for="rules">
             <input type="checkbox" id="rules" name="rules" required>
             I accept the system's rules
             </label>

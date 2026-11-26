@@ -4,9 +4,9 @@ include 'includes/header.php';
 include 'includes/main-nav.php';
 ?>
   <main>
-    <section>
+    <section style="max-width: 500px">
       <h2>Keep your livestock healthy</h2>
-      <p>Livestock Vaccination Reminder System helps 
+      <p>Livestock Vaccination Reminder System helps <br>
         farmers ensure their animals 
         receive timely vaccinations.</p>
       <p>Our platform sends reminders 

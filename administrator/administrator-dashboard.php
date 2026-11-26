@@ -2,8 +2,9 @@
 $page_title = 'Livestock Vaccination Reminder System';
 include '../includes/header.php';
 ?>
-<body>
-<div class="container">
+<div class="layout">
+    <?php include __DIR__ . '/includes/sidebar.php'; ?>
+    <main class="container">
 
     <!-- ADMINISTRATOR DASHBOARD -->
     <section>
@@ -103,5 +104,6 @@ include '../includes/header.php';
         <p>Security Status: <strong>Normal</strong></p>
     </section>
 
+</main>
 </div>
 <?php include '../includes/footer.php'; ?>

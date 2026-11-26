@@ -162,4 +162,29 @@ function confirmDelete() {
         alert('Deletion cancelled.');
         return false;
     }
+
+    document.addEventListener('DOMContentLoaded', function () {
+        const role = document.querySelector('#role');
+        const farmerFields = document.querySelector('#farmer-registration-fields');
+        const veterinarianFields = document.querySelector('#veterinarian-registration-fields');
+
+        if (!role || !farmerFields || !veterinarianFields) {
+            return;
+        }
+
+        const location = document.querySelector('#location');
+        const registrationNumber = document.querySelector('#registration-number');
+
+        function updateRoleFields() {
+            const isFarmer = role.value === 'farmer';
+            const isVeterinarian = role.value === 'veterinarian';
+            farmerFields.hidden = !isFarmer;
+            veterinarianFields.hidden = !isVeterinarian;
+            location.required = isFarmer;
+            registrationNumber.required = isVeterinarian;
+        }
+
+        role.addEventListener('change', updateRoleFields);
+        updateRoleFields();
+    });
 }
