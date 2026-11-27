@@ -22,7 +22,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if ($farmerId === false || $farmerId === null || $livestockId === false || $livestockId === null
         || $vaccineId === false || $vaccineId === null || !valid_iso_date($scheduleDate)
         || ($scheduledTime !== '' && !preg_match('/^(?:[01]\d|2[0-3]):[0-5]\d$/', $scheduledTime))
-        || !in_array($status, ['scheduled', 'postponed', 'cancelled'], true)) {
+        || !in_array($status, ['scheduled', 'postponed', 'cancelled', 'pending'], true)) {
         set_flash('error', 'Please provide valid schedule details.');
     } else {
         try {
@@ -135,6 +135,7 @@ include '../includes/header.php';
                         <option value="scheduled">Scheduled</option>
                         <option value="postponed">Postponed</option>
                         <option value="cancelled">Cancelled</option>
+                        <option value="pending">Pending</option>
                     </select>
                     <label for="notes">Notes</label>
                     <textarea id="notes" name="notes"></textarea>
@@ -145,7 +146,7 @@ include '../includes/header.php';
         <section class="content-panel">
             <h2>Scheduled Vaccinations</h2>
             <table>
-                <thead><tr><th>Schedule ID</th><th>Livestock ID</th><th>Vaccine</th><th>Date</th><th>Status</th></tr></thead>
+                <thead><tr><th>Schedule ID</th><th>Livestock ID</th><th>Farmer ID</th><th>Vaccine</th><th>Date</th><th>Status</th></tr></thead>
                 <tbody>
                 <?php if (mysqli_num_rows($schedules) === 0): ?>
                     <tr><td colspan="5">No records available yet.</td></tr>
@@ -154,6 +155,7 @@ include '../includes/header.php';
                         <tr>
                             <td><?php echo escape_html($schedule['schedule_id']); ?></td>
                             <td><?php echo escape_html($schedule['livestock_id'] ?? ''); ?></td>
+                            <td><?php echo escape_html($schedule['farmer_id']?? ''); ?></td>
                             <td><?php echo escape_html($schedule['vaccine_name']); ?></td>
                             <td><?php echo escape_html($schedule['schedule_date']); ?></td>
                             <td><?php echo escape_html($schedule['schedule_status']); ?></td>

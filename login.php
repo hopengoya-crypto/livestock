@@ -3,6 +3,7 @@ $page_title = 'Livestock Vaccination Reminder System';
 require_once __DIR__ . '/includes/auth.php';
 require_once __DIR__ . '/includes/helpers.php';
 include 'includes/header.php';
+include 'includes/main-nav.php';
 ?>
 <div class="container">
     <div class="form-box" id="login form">

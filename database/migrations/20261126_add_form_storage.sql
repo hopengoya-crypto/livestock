@@ -40,9 +40,9 @@ CREATE TABLE IF NOT EXISTS veterinarian_request (
     vet_id INT NOT NULL,
     request_status VARCHAR(30) NOT NULL DEFAULT 'pending',
     requested_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
-    CONSTRAINT fk_vet_request_farmer
+    CONSTRAINT fk_veterinarian_request_farmer
         FOREIGN KEY (farmer_id) REFERENCES farmer (farmer_id),
-    CONSTRAINT fk_vet_request_veterinarian
+    CONSTRAINT fk_veterinarian_request_veterinarian
         FOREIGN KEY (vet_id) REFERENCES veterinarian (vet_id)
 ) ENGINE=InnoDB;
 
@@ -65,3 +65,5 @@ ALTER TABLE system_reports
 ALTER TABLE system_reports
     ADD CONSTRAINT fk_report_generated_by
         FOREIGN KEY (generated_by) REFERENCES `user` (user_id);
+ALTER TABLE veterinarian
+     ADD COLUMN IF NOT EXISTS location VARCHAR(20) NOT NULL;
